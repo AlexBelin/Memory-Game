@@ -1,6 +1,6 @@
 # Memory-Game
 
-Just a little memory game in pure JS. Graphisms from Rayman, Wakfu and Dofus.
+Just a little memory game in pure JS. Graphisms from Rayman, Wakfu and Dofus. The objective is to flip and match all the turned-down cards.
 
 You will find some JS prototypes, event listener attached to prototype and CSS3 effects / animations...
 
