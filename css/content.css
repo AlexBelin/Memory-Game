@@ -256,6 +256,11 @@ h1, h2, h3, h4, h5, h6{
 	transform: rotateY(0deg);
 	-webkit-transform: rotateY(0deg);
 }
+
+.particle{
+	background: url('../images/Backgrounds/sparkle.png') top left no-repeat;
+	background-size: cover;
+}
 /*==== bloc ====*/
 
 .veil{

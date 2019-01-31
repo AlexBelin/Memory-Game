@@ -291,6 +291,8 @@ function Card(Card){
     this.Vanish = function(){
         var _this = this;
         var _Elem = document.getElementById(_this.Card.FrontId);
+        var _Particles = new ParticleSys(_this.Card.FrontId, "particle", 1500, 20, 20, 40, 200, [0, 1]);
+        _Particles.RenderParticles();
         var _ElemRect = _Elem.getBoundingClientRect();
         _Elem.style.top = _ElemRect.top + "px";
         _Elem.style.left = _ElemRect.left + "px";
@@ -312,6 +314,7 @@ function Card(Card){
             _Elem.style.width = "100%";
             _Elem.style.height = "100%";
             _Elem.style.zIndex = "";
+            _Particles.KillParticles();
         }, 800);
     };
 
