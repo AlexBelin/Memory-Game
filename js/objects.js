@@ -161,6 +161,10 @@ function Game(_Player){
         setTimeout(function(){
             document.getElementById("gbh-coins-taker").classList.add("gbh-coins-taker-blob");
         }, 800);
+        setTimeout(function(){
+            var _Particles = new ParticleSys("gbh-coins-taker", "particle", 400, 3, 20, 40, 70, [0, 1]);
+            _Particles.RenderParticlesExplosion();
+        }, 1400);
     };
 
     this.StartNewGame = function(){

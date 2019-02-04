@@ -63,7 +63,30 @@ function ParticleSys(Emitter, RenderClass, Transition, Frequency, SizeMin, SizeM
             var PartPosY = (Math.floor(Math.random() * ((EmitterPosY + EmitterSizeY) - EmitterPosY)) + EmitterPosY) - (PartSize / 2);
             var _Particle = new ParticleObj(_this.Emitter, _this.RenderClass, PartPosX, PartPosY, _this.Transition, _this.Frequency, PartSize, _this.Amplitude, i, _this.ParticlesDirection);
             _Particle.AnimateParticle();
-            i++
+            i++;
+        }, _this.Frequency);
+    };
+
+    this.RenderParticlesExplosion = function(){
+        var _this = this;
+        var i = 0;
+        PartEmition = setInterval(function(){
+            var EmitterSizeX = document.getElementById(_this.Emitter).getBoundingClientRect().width;
+            var EmitterSizeY = document.getElementById(_this.Emitter).getBoundingClientRect().height;
+            var EmitterPosX = document.getElementById(_this.Emitter).getBoundingClientRect().left;
+            var EmitterPosY = document.getElementById(_this.Emitter).getBoundingClientRect().top;
+            var PartSize = Math.floor(Math.random() * (_this.SizeMax - _this.SizeMin)) + _this.SizeMin;
+            var PartPosX = (Math.floor(Math.random() * ((EmitterPosX + EmitterSizeX) - EmitterPosX)) + EmitterPosX) - (PartSize / 2);
+            var PartPosY = (Math.floor(Math.random() * ((EmitterPosY + EmitterSizeY) - EmitterPosY)) + EmitterPosY) - (PartSize / 2);
+            var DirectionX = (Math.random() * 2) - 1;
+            var DirectionY = (Math.random() * 2) - 1;
+            _this.ParticlesDirection = [DirectionX, DirectionY];
+            var _Particle = new ParticleObj(_this.Emitter, _this.RenderClass, PartPosX, PartPosY, _this.Transition, _this.Frequency, PartSize, _this.Amplitude, i, _this.ParticlesDirection);
+            _Particle.AnimateParticle();
+            if(((i - 1) * _this.Frequency) >= 200){
+                _this.KillParticles();
+            }
+            i++;
         }, _this.Frequency);
     };
 

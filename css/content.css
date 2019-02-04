@@ -276,7 +276,7 @@ h1, h2, h3, h4, h5, h6{
 .game-board-header{
 	position: relative;
 	height: 60px;
-	max-width: 800px;
+	max-width: 600px;
 	margin: 0 auto;
 	background-color: #aac037;
 	box-shadow: 0 1px 0px #9db333, 0 2px 0px #91a52f, 0 3px 0px #889b2b, 0 4px 0px #7f9127, 0 5px 0px #748523, 0 6px 0px #6a791f, 0 7px 0px #616e1c, 0 8px 0px #566319;
@@ -376,6 +376,7 @@ h1, h2, h3, h4, h5, h6{
 	height: 100%;
 	font-size: 0;
 	text-align: center;
+	width: 90%;
 }
 
 .gbh-chapter{
