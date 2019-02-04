@@ -4,4 +4,4 @@ Just a little memory game in pure JS. Graphisms from Rayman, Wakfu and Dofus. Th
 
 You will find a particles system, some JS prototypes, event listener attached to prototype and CSS3 effects / animations...
 
-![alt text](https://github.com/AlexBelin/Memory-Game/blob/master/screen7.jpg)
+![alt text](https://github.com/AlexBelin/Memory-Game/blob/master/screen8.jpg)
